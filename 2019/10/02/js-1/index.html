@@ -55,18 +55,21 @@
   };
 </script>
 
-  <meta name="description" content="So sad.So sad.">
+  <meta name="description" content="这是学习js时的一些记录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tryagain">
-<meta property="og:url" content="http://yoursite.com/2019/08/11/tryagain/index.html">
+<meta property="og:title" content="js-1">
+<meta property="og:url" content="http://yoursite.com/2019/10/02/js-1/index.html">
 <meta property="og:site_name" content="qsleep&#39;s blog">
-<meta property="og:description" content="So sad.So sad.">
+<meta property="og:description" content="这是学习js时的一些记录">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-11T06:54:39.000Z">
+<meta property="og:image" content="http://yoursite.com/2019/10/02/js-1/style.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/02/js-1/DOM.jpg">
+<meta property="og:updated_time" content="2019-10-02T07:10:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tryagain">
-<meta name="twitter:description" content="So sad.So sad.">
-  <link rel="canonical" href="http://yoursite.com/2019/08/11/tryagain/">
+<meta name="twitter:title" content="js-1">
+<meta name="twitter:description" content="这是学习js时的一些记录">
+<meta name="twitter:image" content="http://yoursite.com/2019/10/02/js-1/style.png">
+  <link rel="canonical" href="http://yoursite.com/2019/10/02/js-1/">
 
 
 <script id="page-configurations">
@@ -80,7 +83,7 @@
   };
 </script>
 
-  <title>tryagain | qsleep's blog</title>
+  <title>js-1 | qsleep's blog</title>
   
 
 
@@ -195,7 +198,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/11/tryagain/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/02/js-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qsleep">
@@ -209,7 +212,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">tryagain
+          <h1 class="post-title" itemprop="name headline">js-1
 
             
           </h1>
@@ -226,7 +229,7 @@
                 
               
 
-              <time title="创建时间：2019-08-11 10:33:32 / 修改时间：14:54:39" itemprop="dateCreated datePublished" datetime="2019-08-11T10:33:32+08:00">2019-08-11</time>
+              <time title="创建时间：2019-10-02 14:50:36 / 修改时间：15:10:03" itemprop="dateCreated datePublished" datetime="2019-10-02T14:50:36+08:00">2019-10-02</time>
             </span>
           
             
@@ -245,7 +248,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>So sad.So sad.</p>
+        <p>这是学习js时的一些记录</p>
+<a id="more"></a>
+
+
+<p><em>值和单位不能空格 例font-size:20  px/*错误，不起作用</em>/</p>
+<p><img src="style.png" alt></p>
+<p>低版本不识别style标签时，会直接把样式显示在页面上，这样写就会注释掉</p>
+<p>修改数组的长度可以删除数组的元素<br>例arr=[1,6,4,3];arr.length=2;此时 arr=[1,6]</p>
+<p>length值为最大索引值+1,不管中间有没有元素</p>
+<h3 id="数组排序-sort"><a href="#数组排序-sort" class="headerlink" title="数组排序 .sort()"></a>数组排序 .sort()</h3><ul>
+<li><p><code>数组.sort();</code></p>
+<ul>
+<li>对数组本身排序，没有返回值</li>
+<li>默认按照字符编码排序，例数组为[2，12，1，21]  sort完为[1，12，2，21]</li>
+</ul>
+</li>
+<li><p><code>数组.sort(function(a,b) {  return a-b;});</code></p>
+<ul>
+<li>升序排序，排完是[1，2，12，21]</li>
+</ul>
+</li>
+</ul>
+<h3 id="js-数组操作-会修改原数组的-方法"><a href="#js-数组操作-会修改原数组的-方法" class="headerlink" title="js 数组操作 会修改原数组的 方法"></a>js 数组操作 会修改原数组的 方法</h3><p>1.pop() 删除 数组 最后一个元素；<br>2.shift() 删除 数组 第一个元素；<br>3.push() 数组 最后 添加 一个 元素；<br>4.unshift() 数组 开头 添加 一个 元素；<br>5.sort() 数组 排序<br>6.splice() 数组 删除 替换 插入 元素<br>7.reverse() 数组 反转</p>
+<p>以上7个方法 是会 修改原数组的 其余的数组操作 方法 是不会 修改原数组的</p>
+<h3 id="Js-String-不会被方法改变原来的值"><a href="#Js-String-不会被方法改变原来的值" class="headerlink" title="Js String 不会被方法改变原来的值"></a>Js String 不会被方法改变原来的值</h3><h3 id="DOM-获取元素"><a href="#DOM-获取元素" class="headerlink" title="DOM 获取元素"></a>DOM 获取元素</h3><p><img src="DOM.jpg" alt><br>遍历元素时，firstChild系列会获取到空白的文本节点，用firstElementChild系列就会只获得标签节点</p>
+<p>childElementCount 返回所有的子节点个数，不包括空白的文本节点</p>
 
     </div>
 
@@ -262,8 +290,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/11/first-try/" rel="next" title="first-try">
-                  <i class="fa fa-chevron-left"></i> first-try
+                <a href="/2019/10/02/HTML-入门/" rel="next" title="HTML 入门">
+                  <i class="fa fa-chevron-left"></i> HTML 入门
                 </a>
               
             </div>
@@ -271,10 +299,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/08/11/gogo/" rel="prev" title="gogo">
-                  gogo <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -306,8 +330,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -319,7 +352,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -330,6 +363,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组排序-sort"><span class="nav-number">1.</span> <span class="nav-text">数组排序 .sort()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js-数组操作-会修改原数组的-方法"><span class="nav-number">2.</span> <span class="nav-text">js 数组操作 会修改原数组的 方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Js-String-不会被方法改变原来的值"><span class="nav-number">3.</span> <span class="nav-text">Js String 不会被方法改变原来的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM-获取元素"><span class="nav-number">4.</span> <span class="nav-text">DOM 获取元素</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
